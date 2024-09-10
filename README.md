@@ -1,37 +1,58 @@
-# University System Management Project 🎓🛠️
+# FCAI System
 
-## 📖 Overview
+This is a C++ project for managing student registrations, lab information, subjects, professors, library operations, and worker data within an academic institution.
 
-This repository contains the source code and documentation for a University System Management project. The project aims to streamline and manage various university operations, including student enrollment, course management, faculty assignments, and more.
+## Features
 
-## 🛠️ Project Description
+- **Student Management:** Register new students, display student information.
+- **Lab Management:** Add new labs, display existing labs.
+- **Subject Management:** Add new subjects, display subjects.
+- **Professor Management:** Display a list of professors.
+- **Library Operations:** Add students, books, borrow and return books.
+- **Worker Management:** Add, edit, delete, and display worker information.
+- **Admin Panel:** Admin login for managing various aspects of the system.
 
-The University System Management project is designed to handle the following key functionalities:
+## Classes Overview
 
-- **Student Management**: Registration, enrollment, and tracking of student records.
-- **Course Management**: Creation and management of courses, including schedules and syllabi.
-- **Faculty Management**: Assigning faculty to courses, tracking their schedules, and managing their profiles.
-- **Administration**: Overseeing the entire system, including user roles, permissions, and reporting.
+### `user`
+A base class representing a user with basic information.
 
-### Key Features
+### `Student` (Inherits from `user`)
+Handles student-specific data and operations including registration and displaying student details.
 
-- **Role-Based Access Control**: Different levels of access for administrators, faculty, and students.
-- **Automated Enrollment**: Streamlined processes for enrolling students in courses based on prerequisites and availability.
-- **Reporting Tools**: Generation of reports on student performance, course enrollment statistics, and more.
-- **User-Friendly Interface**: Intuitive design for easy navigation and use by all types of users.
+### `FCAI`
+Handles admin login and user login functionalities.
 
+### `Labs`
+Manages lab information such as name, number, capacity, and enrollment.
 
+### `Subject`
+Manages subject details including subject name and professors.
 
-## 📝 Documentation
+### `Professors`
+Displays a list of professors.
 
-Detailed documentation, including system architecture, class diagrams, and use case descriptions, is available.
-[oopDeadCode.pdf](https://github.com/khalidKE/UniversityProjectOOPwithC-/files/15407945/oopDeadCode.pdf)
+### `University` (Inherits from `Professors`)
+Manages students, subjects, and labs within the university.
 
-## 🤝 Contributing
+### `Library`
+Handles library operations including adding students, books, borrowing, and returning books.
 
-Contributions, suggestions, and feedback are welcome. Please fork this repository, create a new branch for your feature or bugfix, and submit a pull request.
+### `Worker`
+Manages worker data including adding, editing, deleting, and displaying workers.
 
+## Usage
+1- **Admin Login**
+- Admin credentials: Username: fcai, Password: 123
+- Admin can manage students, labs, subjects, professors, and workers.
 
----
+2- **Student Login**
+- Student credentials: Username: khalid, Password: 123
+- Students can view their information, borrow and return books.
 
-This template should give you a solid foundation for documenting your University System Management project. Adjust the details to fit the specifics of your project.
+3- **Worker Management**
+- Add, edit, delete, and display worker information.
+
+4- **Library Management**
+- Manage student and book information.
+- Borrow and return books.
